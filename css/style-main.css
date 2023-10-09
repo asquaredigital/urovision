@@ -2740,7 +2740,7 @@ header#header .menuzord-brand {
     header#header .menuzord-brand {
       margin-right: 0; } }
   header#header .menuzord-brand img {
-    max-height: 54px;
+    max-height: 64px;
     width: auto;
     transition: all 0.3s ease; }
     @media (prefers-reduced-motion: reduce) {
