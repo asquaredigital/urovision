@@ -5,26 +5,26 @@
       <div class="row">
         <div class="col-md-12">
           <!-- Reservation Form Start-->
-          <form id="appointment_form_popup" name="appointment_form" class="appointment-form" method="post" action="includes/appointment.php">
+          <form id="appointment_form_popup" name="appointment_form" class="appointment-form" method="post">
             <h3 class="mt-0">Get an Appointment<span class="text-theme-colored1 font-weight-600"> Now!</span></h3>
             <div class="row">
               <div class="col-sm-6">
                 <div class="mb-3 mb-30">
-                  <input placeholder="Enter Name" type="text" name="form_name" class="form-control required">
+                  <input placeholder="Enter Name" type="text" name="u_name" id="u_name" class="form-control required" required>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="mb-3 mb-30">
-                  <input placeholder="Email" type="text" name="form_email" class="form-control required">
+                  <input placeholder="Email" type="text" name="u_email" id="u_email" class="form-control required" required>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="mb-3 mb-30">
-                  <input placeholder="Phone" type="text" name="form_phone" class="form-control required">
+                  <input placeholder="Phone" type="text" name="phone" id="phone" class="form-control required" required>
                 </div>
               </div>
               <div class="col-sm-6">
-                <select name="form_service" class="form-select required">
+                <select name="service" id="service" class="form-select required">
                   <option value=""> --- Choose Service --- </option>
                   <option value="Urology">Urology</option>
                   <option value="Andrology">Andrology</option>
@@ -34,17 +34,17 @@
               </div>
               <div class="col-sm-6">
                 <div class="mb-3 mb-30">
-                  <input name="form_date" class="form-control required date-picker" type="text" placeholder="Date">
+                  <input name="adate" id="adate" class="form-control required date-picker" type="text" placeholder="Date" required>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="mb-3 mb-30">
-                  <input name="form_time" class="form-control required time-picker" type="text" placeholder="Time">
+                  <input name="atime" id="atime" class="form-control required time-picker" type="text" placeholder="Time" required>
                 </div>
               </div>
               <div class="col-sm-12">
                 <div class="mb-3">
-                  <textarea name="form_message" class="form-control required" rows="5" placeholder="Enter Message"></textarea>
+                  <textarea name="message" id="message" class="form-control required" rows="5" placeholder="Enter Message"></textarea>
                 </div>
               </div>
               <div class="col-sm-12">
@@ -57,32 +57,51 @@
           </form>
           <!-- Reservation Form End-->
 
-          <!-- Reservation Form Validation Start-->
           <script>
-            (function($) {
-              $("#appointment_form_popup").validate({
-                submitHandler: function(form) {
-                  var form_btn = $(form).find('button[type="submit"]');
-                  var form_result_div = '#form-result';
-                  $(form_result_div).remove();
-                  form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
-                  var form_btn_old_msg = form_btn.html();
-                  form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
-                  $(form).ajaxSubmit({
-                    dataType:  'json',
-                    success: function(data) {
-                      if( data.status == 'true' ) {
-                        $(form).find('.form-control').val('');
-                      }
-                      form_btn.prop('disabled', false).html(form_btn_old_msg);
-                      $(form_result_div).html(data.message).fadeIn('slow');
-                      setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 6000);
-                    }
-                  });
+            $(document).ready(function () {
+              $('#appointment_form_popup').submit(function (event) {
+                event.preventDefault(); // Prevent form submission
+          
+                // Get form data
+                var formData = {
+                  u_name: $('#u_name').val(),
+                  u_email: $('#u_email').val(),
+                  phone: $('#phone').val(),
+                  service: $('#service').val(),
+                  adate: $('#adate').val(),
+                  atime: $('#atime').val(),
+                  message: $('#message').val(),
+
+
+                };
+          
+                // Check if form is filled out
+                if (formData.u_name.trim() === '' || formData.u_email.trim() === '' || formData.c_Name.trim() === '' || formData.phone.trim() === '' || formData.date.trim() === '' || formData.time.trim() === ''|| formData.service.trim() === '') {
+                  alert('Please fill out all required fields.');
+                  return;
                 }
+          
+                // Send AJAX request
+                $.ajax({
+                  type: 'POST',
+                  url: 'appointment.php',
+                  data: formData,
+                  dataType: 'json',
+                  encode: true
+                })
+                  .done(function (response) {
+                    // Display response message
+                    $('#response-message').text(response.message);
+          
+                  })
+                  .fail(function (response) {
+                    // Display error message
+                    $('#response-message').text('Error occurred while processing the request.');
+                  });
               });
-            })(jQuery);
+            });
           </script>
+          
           <!-- Reservation Form Validation Start -->
         </div>
       </div>
