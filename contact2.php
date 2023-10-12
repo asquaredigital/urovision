@@ -15,7 +15,7 @@ $subject = $_POST['subject'];
 $message = $_POST['message'];
 
 // Set up email headers
-$headers = "From: iecfabchem.com" . "\r\n" .
+$headers = "From: urovisionclinic.net" . "\r\n" .
            "Reply-To: $u_email" . "\r\n" ;
 
 // Set up email content
