@@ -50,7 +50,9 @@
               <div class="col-sm-12">
                 <div class="mb-3 mb-0 mt-0">
                   <input name="form_botcheck" class="form-control" type="hidden" value="">
-                  <button type="submit" class="btn btn-theme-colored1 btn-round" data-loading-text="Please wait...">Request Appointment Now</button>
+                  <button type="submit" class="btn btn-theme-colored1 btn-round">Request Appointment Now</button>
+                  <div style="text-align: center;" id="response-message"></div>
+
                 </div>
               </div>
             </div>
@@ -76,7 +78,7 @@
                 };
           
                 // Check if form is filled out
-                if (formData.u_name.trim() === '' || formData.u_email.trim() === '' || formData.c_Name.trim() === '' || formData.phone.trim() === '' || formData.date.trim() === '' || formData.time.trim() === ''|| formData.service.trim() === '') {
+                if (formData.u_name.trim() === '' || formData.u_email.trim() === '' || formData.c_Name.trim() === '' || formData.phone.trim() === '' || formData.adate.trim() === '' || formData.atime.trim() === ''|| formData.service.trim() === '') {
                   alert('Please fill out all required fields.');
                   return;
                 }

@@ -24,13 +24,13 @@ $headers = "From: urovisionclinic.net" . "\r\n" .
 
 // Set up email content
 $subject = 'Patient Enquiry Form the Website';
-$message = "Name: $u_name\nEmail: $u_email\nPhone: $phone\nService: $service\nAppointment Date: $adate\nAppointment Time:: $atime\nMessage: $message\n";
+$message = "Name: $u_name\nEmail: $u_email\nPhone: $phone\nService: $service\nAppointment Date: $adate\nAppointment Time: $atime\nMessage: $message\n";
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 if (mail('elavarasan5193@gmail.com', $subject, $message, $headers)) {
     // Email sent successfully
-    $response = array('message' => 'Email sent successfully!');
+    $response = array('message' => 'Appointment Request Sent successfully!');
     echo json_encode($response);
 } else {
     // Failed to send email
