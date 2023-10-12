@@ -213,16 +213,16 @@
         <div class="section-content">
           <div class="row">
             <div class="col-md-12 text-center">
-              <h2 class="title text-white">Team Details</h2>
+              <h2 class="title text-white">Consultant Details</h2>
               <nav role="navigation" class="breadcrumb-trail breadcrumbs">
                 <div class="breadcrumbs">
                   <span class="trail-item trail-begin">
                     <a href="index.html"><span>Home</span></a>
                   </span>
                   <span><i class="fa fa-angle-right"></i></span>
-                  <span class="trail-item"><a href="#"><span>Pages</span></a></span>
+                  <span class="trail-item"><a href="consultants.html"><span>Consultants</span></a></span>
                   <span><i class="fa fa-angle-right"></i></span>
-                  <span class="trail-item trail-end"><span>Team Details</span></span>
+                  <span class="trail-item trail-end"><span>Dr. Malarmagal</span></span>
                 </div>
               </nav>
             </div>
@@ -241,56 +241,7 @@
                 <div class="widget widget_text text-center">
                   <img src="images/team/2.jpg" class="img-fullwidth" alt=""/>
                 </div>
-                <div class="widget widget_text text-center">
-                  <div class="textwidget">
-                    <div class="section-typo-light bg-theme-colored1 mb-md-40 p-30 pt-40 pb-40"> <img class="size-full wp-image-800 aligncenter" src="images/headphone-128.png" alt="" width="128" height="128"/>
-                    <h4>Online Help!</h4>
-                    <h5>+(123) 456-78-90</h5>
-                    </div>
-                  </div>
-                </div>
-                <div class="widget p-30 bg-white-f5">
-                  <h4 class="widget-title widget-title-line-bottom line-bottom-theme-colored1">Quick Contact!</h4>
-                  <form id="quick_contact_form1" name="footer_quick_contact_form" class="quick-contact-form" action="includes/quickcontact.php" method="post">
-                    <div class="mb-3">
-                      <input name="form_email" class="form-control" type="text" placeholder="Enter Email">
-                    </div>
-                    <div class="mb-3">
-                      <textarea name="form_message" class="form-control" required placeholder="Enter Message" rows="3"></textarea>
-                    </div>
-                    <div class="mb-3">
-                      <input name="form_botcheck" class="form-control" type="hidden" value="" />
-                      <button type="submit" class="btn btn-theme-colored1 btn-round" data-loading-text="Please wait...">Send Message</button>
-                    </div>
-                  </form>
-
-                  <!-- Quick Contact Form Validation-->
-                  <script>
-                    (function($) {
-                      $("#quick_contact_form1").validate({
-                        submitHandler: function(form) {
-                          var form_btn = $(form).find('button[type="submit"]');
-                          var form_result_div = '#form-result';
-                          $(form_result_div).remove();
-                          form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
-                          var form_btn_old_msg = form_btn.html();
-                          form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
-                          $(form).ajaxSubmit({
-                            dataType:  'json',
-                            success: function(data) {
-                              if( data.status === 'true' ) {
-                                $(form).find('.form-control').val('');
-                              }
-                              form_btn.prop('disabled', false).html(form_btn_old_msg);
-                              $(form_result_div).html(data.message).fadeIn('slow');
-                              setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 6000);
-                            }
-                          });
-                        }
-                      });
-                    })(jQuery);
-                  </script>
-                </div>
+            
               </div>
             </div>
             <div class="col-lg-9">

@@ -57,6 +57,9 @@
     $('.tm-owl-carousel-4col').trigger('destroy.owl.carousel');
   });
 </script>
+<style>
+  
+</style>
 </head>
 <body class="tm-container-1300px has-side-panel side-panel-right">
 <!-- preloader -->
@@ -66,7 +69,7 @@
       <div class="cssload-loading"><i></i><i></i><i></i><i></i></div>
     </div>
   </div>
-  <div id="disable-preloader" class="btn btn-default btn-sm">Disable Preloader</div>
+  <div id="disable-preloader" class="btn btn-default btn-sm"></div>
 </div>
 <div class="side-panel-body-overlay"></div>
 
@@ -82,7 +85,6 @@
           <a class="post-thumb" href="prostate.html"><img src="images/blog/s2.jpg" alt="images"></a>
           <div class="post-right">
             <h5 class="post-title mt-0"><a href="prostate.html">Prostate Screening </a></h5>
-            <p>Lorem ipsum dolor...</p>
           </div>
         </article>
       
@@ -101,9 +103,9 @@
           <div class="col-xl-auto header-top-left align-self-center text-center text-xl-start">
 
             <ul class="element contact-info">
-              <li class="contact-phone"><i class="fa fa-phone font-icon sm-display-block"></i> Tel: 89030 47706</li>
-              <li class="contact-email"><i class="fa fa-envelope font-icon sm-display-block"></i> contact@example.com</li>
-              <li class="contact-address"><i class="fa fa-map font-icon sm-display-block"></i> 705 Kurinji, Trichy Main Road, New Housing Unit, Thanjavur-613005</li>
+              <li class="contact-phone"><i class="fa fa-phone font-icon sm-display-block"></i> Tel: 04362 227706</li>
+              <li class="contact-email"><i class="fa fa-envelope font-icon sm-display-block"></i> urovisionclinic2015@gmail.com</li>
+              <li class="contact-address"><i class="fa fa-map font-icon sm-display-block"></i> HIG - 705 Kurinji, New Housing Unit, Opposite to Serfoji College, Thanjavur-613005</li>
             </ul>
           </div>
           <div class="col-xl-auto ms-xl-auto header-top-right align-self-center text-center text-xl-end">
@@ -546,7 +548,7 @@
                 <div class="p-30">
                   <h3 class="text-uppercase text-white mt-0">Departments <br><small class="text-gray-lighter"></small></h3>
                   <p class="text-white"> Our expert team offers a wide range of specialized medical care in the fields of urology, andrology, and ophthalmology. </p>
-                  <a href="#services" class="btn btn-outline-light btn-round btn-xs">Learn More</a>
+                  <a href="departments.html" class="btn btn-outline-light btn-round btn-xs">Learn More</a>
                 </div>
               </div>
             </div>
@@ -556,7 +558,7 @@
                   <h3 class="text-uppercase text-white mt-0">Our Facilities <br></h3>
                   <p class="text-white">At UroVision Clinic, we pride ourselves on providing a state-of-the-art facility equipped
                     with Advanced Surgical Suites,Modern Ophthalmology Unit,State-of-the-art Diagnostic Lab</p>
-                  <a href="page-contact1.html" class="btn btn-outline-light btn-round btn-xs">Contact Us</a>
+                  <a href="contact.html" class="btn btn-outline-light btn-round btn-xs">Contact Us</a>
                 </div>
               </div>
             </div>
@@ -780,8 +782,8 @@
         <div class="call-to-action">
           <div class="row justify-content-md-center">
             <div class="col-md-8 text-center">
-              <h2 class="text-white"><i class="pe-7s-call text-white"></i><a class="text-white" href="#"> (+91) &ndash; 89030 47706</a></h2>
-              <h2 class="text-white">Please free to contact us for emergency case.</h2>
+              <h2 class="text-white">UroVision</h2>
+              <h2 class="text-white">Compassion in Care, Excellence in Health</h2>
               <a href="contact.html" class="btn btn-default btn-theme-colored2 mt-20">Contact With Us</a>
             </div>
           </div>
@@ -1534,10 +1536,9 @@
               <div class="tm-widget tm-widget-contact">
                 <ul class="contact-info">
                   <li class="contact-address"><i class="fas fa-map-marked-alt font-icon sm-display-block mr-10"></i> 705 Kurinji, Trichy Main Road, New Housing Unit, Thanjavur-613005.</li>
-                  <li class="contact-email"><i class="fas fa-envelope font-icon sm-display-block mr-10"></i> info@example.com</li>
-                  <li class="contact-phone"><i class="fas fa-phone font-icon sm-display-block mr-10"></i> +91 89030 47706</li>
+                  <li class="contact-email"><i class="fas fa-envelope font-icon sm-display-block mr-10"></i> urovisionclinic2015@gmail.com</li>
+                  <li class="contact-phone"><i class="fas fa-phone font-icon sm-display-block mr-10"></i> Tel: 04362 227706, <br><a href="#" id="whatsapp-icon">Click here to WhatsApp: +91 89030 47706</a></li>
                 </ul>
-               
               </div>
             </div>
           </div>
@@ -1548,7 +1549,9 @@
           <div class="row justify-content-center pt-30 pb-30">
             <div class="col-lg-8">
               <div class="footer-paragraph text-center">
-                © Copyright 2023
+                Copyright 2023 © UroVision
+                <br>
+                Designed by <a href="https://asquare.tech/" target="/blank">ASQUARE DIGITAL SOLUTIONS</a>
               </div>
             </div>
           </div>
@@ -1563,6 +1566,16 @@
 <!-- Footer Scripts -->
 <!-- JS | Custom script for all pages -->
 <script src="js/custom.js"></script>
+<script>
+  $(document).ready(function () {
+     $('#whatsapp-icon').click(function () {
+        var phone = '+91 9095171747'; // Replace with your phone number
+        var message = 'Hello'; // Replace with your message
+        var url = 'https://api.whatsapp.com/send?phone=' + phone + '&text=' + encodeURIComponent(message);
+        window.open(url);
+     });
+  });
+</script>
 
 
 </body>

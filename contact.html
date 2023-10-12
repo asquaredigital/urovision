@@ -217,9 +217,8 @@
                 <div class="breadcrumbs">
                   <span><a href="#" rel="home">Home</a></span>
                   <span><i class="fa fa-angle-right"></i></span>
-                  <span><a href="#">Pages</a></span>
-                  <span><i class="fa fa-angle-right"></i></span>
-                  <span class="active">Page Title</span>
+                  <span><a href="contact.html">Contact</a></span>
+                 
                 </div>
               </nav>
             </div>
@@ -234,7 +233,7 @@
         <div class="section-content">
           <div class="row">
             <div class="col-lg-6">
-              <h5 class="mb-0 text-gray">Happy to help!</h5>
+              <h5 class="mb-0 text-gray">Happy to help!</h5><br>
               <div class="icon-box icon-left iconbox-centered-in-responsive iconbox-theme-colored1 animate-icon-on-hover animate-icon-rotate mb-50">
                 <div class="icon-box-wrapper">
                   <div class="icon-wrapper">
@@ -242,7 +241,7 @@
                   </div>
                   <div class="icon-text">
                     <h5 class="icon-box-title mt-0">Phone</h5>
-                    <div class="content"><a href="tel:+123.456.7890">+91 89030 47706</a></div>
+                    <div class="content"><a href="">Tel: 04362 227706</a><br><a href="#" id="whatsapp-icon">Click here to WhatsApp: +91 89030 47706</a></div>
                   </div>
                   <div class="clearfix"></div>
                 </div>
@@ -254,7 +253,7 @@
                   </div>
                   <div class="icon-text">
                     <h5 class="icon-box-title mt-0">Email</h5>
-                    <div class="content"><a href="mailto:needhelp@yourdomain.com">needhelp@yourdomain.com</a></div>
+                    <div class="content"><a href="mailto:needhelp@yourdomain.com">urovisionclinic2015@gmail.com</a></div>
                   </div>
                   <div class="clearfix"></div>
                 </div>
@@ -266,7 +265,7 @@
                   </div>
                   <div class="icon-text">
                     <h5 class="icon-box-title mt-0">Address</h5>
-                    <div class="content"> 705 Kurinji, Trichy Main Road, New Housing Unit, Thanjavur-613005</div>
+                    <div class="content"> HIG - 705 Kurinji, New Housing Unit, Opposite to Serfoji College, Thanjavur-613005</div>
                   </div>
                   <div class="clearfix"></div>
                 </div>
@@ -282,8 +281,8 @@
               </ul>
             </div>
             <div class="col-lg-6">
-              <h2 class="mt-0 mb-0">Interested in discussing?</h2>
-              <p class="font-size-20">Active & Ready to use Contact Form!</p>
+              <h2 class="mt-0 mb-0">Have any Queries ?</h2>
+              <p class="font-size-20">We are ready to help you!</p>
               <!-- Contact Form -->
               <form id="contact_form" name="contact_form" class="" action="includes/sendmail.php" method="post">
                 <div class="row">
@@ -460,5 +459,16 @@
 <!-- Footer Scripts -->
 <!-- JS | Custom script for all pages -->
 <script src="js/custom.js"></script>
+<script>
+  $(document).ready(function () {
+     $('#whatsapp-icon').click(function () {
+        var phone = '+91 9095171747'; // Replace with your phone number
+        var message = 'Hello'; // Replace with your message
+        var url = 'https://api.whatsapp.com/send?phone=' + phone + '&text=' + encodeURIComponent(message);
+        window.open(url);
+     });
+  });
+</script>
+
 </body>
 </html>
