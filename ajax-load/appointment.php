@@ -1,3 +1,5 @@
+
+
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -7,7 +9,6 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-
 // Get form data
 $u_name = $_POST['u_name'];
 $u_email = $_POST['u_email'];
@@ -15,22 +16,27 @@ $phone = $_POST['phone'];
 $service = $_POST['service'];
 $adate = $_POST['adate'];
 $atime = $_POST['atime'];
-$message = $_POST['message'];
+$message1 = $_POST['message1'];
 
-// Set up email headers
-// Set up email headers
-$headers = "From: urovisionclinic.net" . "\r\n" .
-           "Reply-To: $u_email" . "\r\n" ;
+$message = "Name: $u_name<br>Email: $u_email<br>Phone: $phone<br>Service: $service<br>Appointment Date: $adate<br>Appointment Time: $atime<br>Message: $message1";
 
-// Set up email content
-$subject = 'Patient Enquiry Form the Website';
-$message = "Name: $u_name\nEmail: $u_email\nPhone: $phone\nService: $service\nAppointment Date: $adate\nAppointment Time: $atime\nMessage: $message\n";
-error_reporting(E_ALL);
+
 ini_set('display_errors', 1);
+error_reporting(E_ALL);
+$from = "test@urovisionclinic.net";
+$to = "elavarasan5193@gmail.com";
+$subject = "Appointment Request Form the Website";
 
-if (mail('elavarasan5193@gmail.com', $subject, $message, $headers)) {
+$replyTo = $u_email;
+
+$headers = "From: $from\r\n";
+$headers .= "Reply-To: $replyTo\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-type: text/html; charset=utf-8\r\n";
+
+if (mail($to, $subject, $message, $headers)) {
     // Email sent successfully
-    $response = array('message' => 'Appointment Request Sent successfully!');
+    $response = array('message' => 'Email sent successfully!');
     echo json_encode($response);
 } else {
     // Failed to send email
@@ -39,4 +45,5 @@ if (mail('elavarasan5193@gmail.com', $subject, $message, $headers)) {
     echo "Error: " . error_get_last()['message'];
 }
 ?>
+
 

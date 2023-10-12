@@ -298,12 +298,7 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-sm-6">
-                    <div class="mb-3">
-                      <label>Subject <small>*</small></label>
-                      <input name="subject" id="subject" class="form-control required" type="text" placeholder="Enter Subject" required>
-                    </div>
-                  </div>
+                 
                   <div class="col-sm-6">
                     <div class="mb-3">
                       <label>Phone</label>
@@ -314,7 +309,7 @@
 
                 <div class="mb-3">
                   <label>Message</label>
-                  <textarea name="message" id="message" class="form-control required" rows="5" placeholder="Enter Message"></textarea>
+                  <textarea name="message1" id="message1" class="form-control required" rows="5" placeholder="Enter Message"></textarea>
                 </div>
                 <div class="mb-3">
                   <input name="form_botcheck" class="form-control" type="hidden" value="" />
@@ -458,8 +453,7 @@
         u_name: $('#u_name').val(),
         u_email: $('#u_email').val(),
         phone: $('#phone').val(),
-        Subject: $('#subject').val(),
-        message: $('#message').val(),
+        message1: $('#message1').val(),
 
 
       };
@@ -478,6 +472,8 @@
         .done(function (response) {
           // Display response message
           $('#response-message').text(response.message);
+                $('#contact_form')[0].reset();
+
 
         })
         .fail(function (response) {

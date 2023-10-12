@@ -44,7 +44,7 @@
               </div>
               <div class="col-sm-12">
                 <div class="mb-3">
-                  <textarea name="message" id="message" class="form-control required" rows="5" placeholder="Enter Message"></textarea>
+                  <textarea name="message1" id="message1" class="form-control required" rows="5" placeholder="Enter Message"></textarea>
                 </div>
               </div>
               <div class="col-sm-12">
@@ -59,46 +59,45 @@
           </form>
           <!-- Reservation Form End-->
 
-          <script>
-            $(document).ready(function () {
-              $('#appointment_form_popup').submit(function (event) {
-                event.preventDefault(); // Prevent form submission
-          
-                // Get form data
-                var formData = {
-                  u_name: $('#u_name').val(),
-                  u_email: $('#u_email').val(),
-                  phone: $('#phone').val(),
-                  service: $('#service').val(),
-                  adate: $('#adate').val(),
-                  atime: $('#atime').val(),
-                  message: $('#message').val(),
+       <script>
+$(document).ready(function () {
+  $('#appointment_form_popup').submit(function (event) {
+    event.preventDefault(); // Prevent form submission
 
+    // Get form data
+    var formData = {
+      u_name: $('#u_name').val(),
+      u_email: $('#u_email').val(),
+      phone: $('#phone').val(),
+      service: $('#service').val(),
+      adate: $('#adate').val(),
+      atime: $('#atime').val(),
+      message1: $('#message1').val(),
+    };
 
-                };
-          
-                
-          
-                // Send AJAX request
-                $.ajax({
-                  type: 'POST',
-                  url: 'ajax-load/appointment.php',
-                  data: formData,
-                  dataType: 'json',
-                  encode: true
-                })
-                  .done(function (response) {
-                    // Display response message
-                    $('#response-message').text(response.message);
-          
-                  })
-                  .fail(function (response) {
-                    // Display error message
-                    $('#response-message').text('Error occurred while processing the request.');
-                  });
-              });
-            });
-          </script>
+    // Send AJAX request
+    $.ajax({
+      type: 'POST',
+      url: 'ajax-load/appointment.php',
+      data: formData,
+      dataType: 'json',
+      encode: true
+    })
+    .done(function (response) {
+      // Display response message
+      $('#response-message').text(response.message);
+
+      // Clear the form after a successful submission
+      $('#appointment_form_popup').reset();
+    })
+    .fail(function (response) {
+      // Display error message
+      $('#response-message').text('Error occurred while processing the request.');
+    });
+  });
+});
+</script>
+
           
           <!-- Reservation Form Validation Start -->
         </div>
