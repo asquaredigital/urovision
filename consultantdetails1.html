@@ -66,7 +66,6 @@
       <div class="cssload-loading"><i></i><i></i><i></i><i></i></div>
     </div>
   </div>
-  <div id="disable-preloader" class="btn btn-default btn-sm">Disable Preloader</div>
 </div>
 <div class="side-panel-body-overlay"></div>
 
@@ -82,7 +81,6 @@
           <a class="post-thumb" href="prostate.html"><img src="images/blog/s2.jpg" alt="images"></a>
           <div class="post-right">
             <h5 class="post-title mt-0"><a href="prostate.html">Prostate Screening </a></h5>
-            <p>Lorem ipsum dolor...</p>
           </div>
         </article>
       
@@ -101,9 +99,9 @@
           <div class="col-xl-auto header-top-left align-self-center text-center text-xl-start">
 
             <ul class="element contact-info">
-              <li class="contact-phone"><i class="fa fa-phone font-icon sm-display-block"></i> Tel: 89030 47706</li>
-              <li class="contact-email"><i class="fa fa-envelope font-icon sm-display-block"></i> contact@example.com</li>
-              <li class="contact-address"><i class="fa fa-map font-icon sm-display-block"></i> 705 Kurinji, Trichy Main Road, New Housing Unit, Thanjavur-613005</li>
+              <li class="contact-phone"><i class="fa fa-phone font-icon sm-display-block"></i> Tel: 04362 227706</li>
+              <li class="contact-email"><i class="fa fa-envelope font-icon sm-display-block"></i> urovisionclinic2015@gmail.com</li>
+              <li class="contact-address"><i class="fa fa-map font-icon sm-display-block"></i> HIG - 705 Kurinji, New Housing Unit, Opposite to Serfoji College, Thanjavur-613005</li>
             </ul>
           </div>
           <div class="col-xl-auto ms-xl-auto header-top-right align-self-center text-center text-xl-end">
@@ -353,5 +351,15 @@
 <!-- Footer Scripts -->
 <!-- JS | Custom script for all pages -->
 <script src="js/custom.js"></script>
+<script>
+  $(document).ready(function () {
+     $('#whatsapp-icon').click(function () {
+        var phone = '+91 8903047706'; // Replace with your phone number
+        var message = 'Hello'; // Replace with your message
+        var url = 'https://api.whatsapp.com/send?phone=' + phone + '&text=' + encodeURIComponent(message);
+        window.open(url);
+     });
+  });
+</script>
 </body>
 </html>

@@ -66,7 +66,6 @@
       <div class="cssload-loading"><i></i><i></i><i></i><i></i></div>
     </div>
   </div>
-  <div id="disable-preloader" class="btn btn-default btn-sm">Disable Preloader</div>
 </div>
 <div class="side-panel-body-overlay"></div>
 
@@ -438,5 +437,15 @@
 <!-- Footer Scripts -->
 <!-- JS | Custom script for all pages -->
 <script src="js/custom.js"></script>
+<script>
+  $(document).ready(function () {
+     $('#whatsapp-icon').click(function () {
+        var phone = '+91 8903047706'; // Replace with your phone number
+        var message = 'Hello'; // Replace with your message
+        var url = 'https://api.whatsapp.com/send?phone=' + phone + '&text=' + encodeURIComponent(message);
+        window.open(url);
+     });
+  });
+</script>
 </body>
 </html>
