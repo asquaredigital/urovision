@@ -24,7 +24,7 @@ $message = "Name: $u_name<br>Email: $u_email<br>Phone: $phone<br>Service: $servi
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 $from = "test@urovisionclinic.net";
-$to = "urovisionclinic2015@gmail.com";
+$to = "elavarasan5193@gmail.com";
 $subject = "Appointment Request Form the Website";
 
 $replyTo = $u_email;

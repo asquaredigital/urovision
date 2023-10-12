@@ -20,7 +20,7 @@ $message = "Name: $u_name<br>Email: $u_email<br>Phone Number: $phone<br>Subject:
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 $from = "test@urovisionclinic.net";
-$to = "elavarasan5193@gmail.com";
+$to = "urovisionclinic2015@gmail.com";
 $subject = "Enquiry Form the Website";
 
 $replyTo = $u_email;
