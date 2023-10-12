@@ -77,11 +77,7 @@
 
                 };
           
-                // Check if form is filled out
-                if (formData.u_name.trim() === '' || formData.u_email.trim() === '' || formData.phone.trim() === '' || formData.adate.trim() === '' || formData.atime.trim() === ''|| formData.service.trim() === '') {
-                  alert('Please fill out all required fields.');
-                  return;
-                }
+                
           
                 // Send AJAX request
                 $.ajax({
