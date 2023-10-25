@@ -5,14 +5,16 @@ $URL: https://themeforest.net/user/ThemeMascot
 ----------------------------------------- */
 :root {
   --theme-color1: #259399;
-  --theme-color1-rgb: 17, 150, 204;
+  --theme-color1-rgb: 37, 147, 153;
   --theme-color2: #12444b;
-  --theme-color2-rgb: 32, 44, 69;
+  --theme-color2-rgb: 18, 68, 75;
   --theme-color3: #042328;
-  --theme-color3-rgb: 16, 33, 71;
+  --theme-color3-rgb: 4, 35, 40;
   --theme-color4: #fc6a20;
   --theme-color4-rgb: 252, 106, 32; }
 
+
+  
 /*
  * background: theme-color
  * -----------------------------------------------
@@ -262,25 +264,25 @@ ul.list.theme-colored1.check li:before,
 .layer-overlay {
   /* .overlay-theme-colored1 */ }
   .layer-overlay.overlay-theme-colored1::before {
-    background-color: rgba(17, 150, 204, 0.8) !important; }
+    background-color: rgba(37, 147, 153, 0.8) !important; }
   .layer-overlay.overlay-theme-colored1-1::before {
-    background-color: rgba(17, 150, 204, 0.1); }
+    background-color: rgba(4, 35, 40, 0.1); }
   .layer-overlay.overlay-theme-colored1-2::before {
-    background-color: rgba(17, 150, 204, 0.2); }
+    background-color: rgba(18, 68, 75, 0.2); }
   .layer-overlay.overlay-theme-colored1-3::before {
-    background-color: rgba(17, 150, 204, 0.3); }
+    background-color: rgba(37, 147, 153, 0.3); }
   .layer-overlay.overlay-theme-colored1-4::before {
-    background-color: rgba(17, 150, 204, 0.4); }
+    background-color: rgba(37, 147, 153, 0.4); }
   .layer-overlay.overlay-theme-colored1-5::before {
-    background-color: rgba(17, 150, 204, 0.5); }
+    background-color: rgba(37, 147, 153, 0.5); }
   .layer-overlay.overlay-theme-colored1-6::before {
-    background-color: rgba(17, 150, 204, 0.6); }
+    background-color: rgba(37, 147, 153, 0.6); }
   .layer-overlay.overlay-theme-colored1-7::before {
-    background-color: rgba(17, 150, 204, 0.7); }
+    background-color: rgba(37, 147, 153, 0.7); }
   .layer-overlay.overlay-theme-colored1-8::before {
-    background-color: rgba(17, 150, 204, 0.8); }
+    background-color: rgba(37, 147, 153, 0.8); }
   .layer-overlay.overlay-theme-colored1-9::before {
-    background-color: rgba(17, 150, 204, 0.9); }
+    background-color: rgba(37, 147, 153, 0.9); }
 
 /*
  * Shortcode: styled-icons Theme Colored
